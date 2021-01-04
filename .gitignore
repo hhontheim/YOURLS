@@ -23,6 +23,7 @@ user/*
 # ... and index.html files
 !user/index.html
 !user/**/index.html
+!user/languages/
 
 ############
 ## Tests
