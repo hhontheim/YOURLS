@@ -78,7 +78,7 @@ if ( isset( $_REQUEST['url'] ) && $_REQUEST['url'] != 'http://' ) {
 		echo <<<HTML
 		<h2>Enter a new URL to shorten</h2>
 		<form method="post" action="">
-		<p><label>URL: <input type="text" class="text" name="url" value="http://" /></label></p>
+		<p><label>URL: <input type="text" class="text" name="url" value="https://" /></label></p>
 		<p><label>Optional custom short URL: $site/<input type="text" class="text" name="keyword" /></label></p>
 		<p><label>Optional title: <input type="text" class="text" name="title" /></label></p>
 		<p><input type="submit" class="button primary" value="Shorten" /></p>
