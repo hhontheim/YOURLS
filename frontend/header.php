@@ -2,7 +2,7 @@
   include 'config.php';
   include 'functions.php';
 ?>
-<html lang="en">
+<html lang="de">
   <head>
 
     <meta charset="utf-8">

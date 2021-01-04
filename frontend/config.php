@@ -13,7 +13,7 @@ define('title', 'honthe.im');
 define('shortTitle', 'honthe.im');
 
 // A description of your site, shown on the homepage.
-define('description', 'Enter an URL to shorten!'); 
+define('description', 'Gib\' eine URL ein!'); 
 
 // The favicon for your site
 define('favicon', '/frontend/assets/img/favicon.ico');
@@ -50,7 +50,7 @@ define('colour', '#82C900');
 // "TITLE" => "LINK",
 $footerLinks = [
     #"About"   =>  "https://sleeky.flynntes.com/",
-    "Contact" =>  "mailto:shortener@hontheim.net",
+    "Kontakt" =>  "mailto:shortener@hontheim.net",
     #"Legal"   =>  "https://sleeky.flynntes.com/",
     "Admin"   =>  "/admin",
 ];

@@ -64,7 +64,7 @@
 		// Stop here if bookmarklet with a JSON callback function ("instant" bookmarklets)
 		if( isset( $_GET['jsonp'] ) && $_GET['jsonp'] == 'yourls' ) {
 			$short = $return['shorturl'] ? $return['shorturl'] : '';
-			$message = "Short URL (Ctrl+C to copy)";
+			$message = "Kurze URL (Ctrl+C zum Kopieren)";
 			header('Content-type: application/json');
 			echo yourls_apply_filter( 'bookmarklet_jsonp', "yourls_callback({'short_url':'$short','message':'$message'});" );
 			die();
@@ -84,12 +84,12 @@
 				    <a href="javascript:window.location.href=window.location.href;"><i class="material-icons">close</i></a>
 				</div>
 				<section class="head">
-					<h2>YOUR SHORTENED LINK:</h2>
+					<h2>DEIN GEK&Uuml;RZTER LINK:</h2>
 				</section>
 				<section class="link-section">
 					<input type="text" class="short-url" disabled style="text-transform:none;" value="<?php echo $shorturl; ?>">
-					<button class="short-url-button noselect" data-clipboard-text="<?php echo $shorturl; ?>">Copy</button>
-					<span class="info">View info &amp; stats at <a href="<?php echo $shorturl; ?>+"><?php echo $url; ?>+</a></span>
+					<button class="short-url-button noselect" data-clipboard-text="<?php echo $shorturl; ?>">Kopieren</button>
+					<span class="info">Info &amp; Statistiken hier anschauen: <a href="<?php echo $shorturl; ?>+"><?php echo $url; ?>+</a>.</span>
 				</section>
 			</div>
 	</section>
@@ -114,25 +114,25 @@
 				<?php if ( isset( $_REQUEST['url'] ) && $_REQUEST['url'] != 'http://' ): ?>
 					<?php if (strpos($message,'added') === false): ?>
 						<div id="error" class="alert alert-warning error" role="alert">
-							<h5>Oh no, <?php echo $message; ?>!</h5>
+							<h5>Oh nein, <?php echo $message; ?>!</h5>
 						</div>	    
 					<?php endif; ?>
 				<?php endif; ?>
 				<form id="shortenlink" method="post" action="">
-					<input type="url" name="url" class="url" id="url" placeholder="PASTE URL, SHORTEN &amp; SHARE" required>
-					<input type="submit" value="Shorten">
+					<input type="url" name="url" class="url" id="url" placeholder="URL EINF&Uuml;GEN, K&Uuml;RZEN &amp; TEILEN" required>
+					<input type="submit" value="K&Uuml;rzen">
 					<?php if (enableCustomURL): ?>
-						<span class="customise-button noselect" id="customise-toggle"><img src="<?php echo siteURL ?>/frontend/assets/svg/custom-url.svg" alt="Options"> Customise Link</span>
+						<span class="customise-button noselect" id="customise-toggle"><img src="<?php echo siteURL ?>/frontend/assets/svg/custom-url.svg" alt="Options"> Link anpassen</span>
 						<div class="customise-container" id="customise-link" style="display:none;">
 							<span><!--<?php echo preg_replace("(^https?://)", "", siteURL ); ?>-->https://honthe.im/</span>
-							<input type="text" name="keyword" class="custom" placeholder="CUSTOM URL">
+							<input type="text" name="keyword" class="custom" placeholder="EIGENE URL">
 						</div>
 					<?php endif; ?>
 				</form>
 			</section>
 			<section class="footer">
 		<div>
-			<span class="light">&copy; <?php echo date("Y"); ?> <?php echo shortTitle ?></span>
+			<span class="light">&copy; <?php echo date("Y"); ?> <a href="https://honthe.im/"><?php echo shortTitle ?></a></span>
 			<div class="footer-links">
 				<?php foreach ($footerLinks as $key => $val): ?>
 					<a href="<?php echo $val ?>"><span><?php echo $key ?></span></a>
