@@ -124,7 +124,7 @@
 					<?php if (enableCustomURL): ?>
 						<span class="customise-button noselect" id="customise-toggle"><img src="<?php echo siteURL ?>/frontend/assets/svg/custom-url.svg" alt="Options"> Customise Link</span>
 						<div class="customise-container" id="customise-link" style="display:none;">
-							<span><?php echo preg_replace("(^https?://)", "", siteURL ); ?>/</span>
+							<span><!--<?php echo preg_replace("(^https?://)", "", siteURL ); ?>-->https://honthe.im/</span>
 							<input type="text" name="keyword" class="custom" placeholder="CUSTOM URL">
 						</div>
 					<?php endif; ?>
